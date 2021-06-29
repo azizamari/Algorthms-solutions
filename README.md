@@ -1,2 +1,2 @@
-# Algorthmic-Interviews-Sheet
-## [Rrogress File](https://docs.google.com/spreadsheets/d/1sIs4MW4JijrxjeW-WQtLj-HV9znTfVjH3a5coSkf5QE)
+# Algorthms-solutions
+I created this repo to save solutions of some problems I solved during my road to master technical interviews
