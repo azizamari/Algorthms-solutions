@@ -9,3 +9,5 @@ def tiling(n,canRed=True,memo={}):
     for i in range(3,n+1):
       memo[n]+=tiling(n-i,False,memo)
   return memo[n]
+
+print(tiling(50))
