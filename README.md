@@ -9,3 +9,10 @@ I created this repo to save solutions of some problems I solved during my road t
 * Graph Theory
 * Bit manipulation
 * ~200 medium leet code problems (quality > quality)
+
+### Resources 
+* youtube playlists (will put links soon)
+* Cracking the coding interview - Book
+* Introduction to algorthms by cormen and more - Book
+* Leetcode 
+* [Algorthmic-Interviews-Sheet](https://docs.google.com/spreadsheets/d/1sIs4MW4JijrxjeW-WQtLj-HV9znTfVjH3a5coSkf5QE)
