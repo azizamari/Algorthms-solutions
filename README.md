@@ -8,7 +8,7 @@ I created this repo to save solutions of some problems I solved during my road t
 * Greedy Algorithms
 * Graph Theory
 * Bit manipulation
-* ~200 medium leet code problems (quality > quality)
+* ~200 medium leet code problems (quantity > quality)
 
 ### Resources 
 * youtube playlists (will put links soon)
