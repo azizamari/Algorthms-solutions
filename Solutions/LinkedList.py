@@ -35,7 +35,7 @@ class LinkedList:
             self.tail.next=Node(value)
             self.tail=self.tail.next
         return self.tail
-    def poulateRandom(self,n,min,max):
+    def populateRandom(self,n,min,max):
         self.head=None
         self.tail=None
         for i in range(n):
