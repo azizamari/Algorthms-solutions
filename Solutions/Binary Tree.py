@@ -18,6 +18,16 @@ def preOrder(root):
         preOrder(root.left)
         preOrder(root.right)
     else:return
-  
+
+def inOrder(root):
+    if root is not None:
+        preOrder(root.left)
+        print(root.value,end='')
+        preOrder(root.right)
+    else:return
+
+
 print('preOrder:')
 preOrder(newBT) 
+print('\ninOrder:')
+inOrder(newBT) 
