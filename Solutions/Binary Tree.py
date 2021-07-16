@@ -26,8 +26,17 @@ def inOrder(root):
         preOrder(root.right)
     else:return
 
+def postOrder(root):
+    if root is not None:
+        preOrder(root.left)
+        preOrder(root.right)
+        print(root.value,end='')
+    else:
+        return    
 
 print('preOrder:')
 preOrder(newBT) 
 print('\ninOrder:')
 inOrder(newBT) 
+print('\npostOrder:')
+postOrder(newBT) 
