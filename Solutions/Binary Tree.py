@@ -34,9 +34,20 @@ def postOrder(root):
     else:
         return    
 
+def ifNodeExists(root, key): 
+    if (root == None):
+        return False
+    if (root.value == key):
+        return True
+    if ifNodeExists(root.left, key):
+        return True 
+    return ifNodeExists(root.right, key)
+
 print('preOrder:')
 preOrder(newBT) 
 print('\ninOrder:')
 inOrder(newBT) 
 print('\npostOrder:')
-postOrder(newBT) 
+postOrder(newBT)
+print('') 
+print(ifNodeExists(newBT,6))
