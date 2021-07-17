@@ -11,6 +11,7 @@ newBT.left.left=TreeNode(3)
 newBT.left.right=TreeNode(4)
 newBT.right.left=TreeNode(5)
 newBT.right.right=TreeNode(6)
+newBT.left.left.left=TreeNode(69)
 
 def preOrder(root):
     if root is not None:
@@ -43,6 +44,11 @@ def ifNodeExists(root, key):
         return True 
     return ifNodeExists(root.right, key)
 
+def treeHeight(root):
+    if(root == None):
+        return -1
+    return max(treeHeight(root.left), treeHeight(root.right))+1
+
 print('preOrder:')
 preOrder(newBT) 
 print('\ninOrder:')
@@ -51,3 +57,4 @@ print('\npostOrder:')
 postOrder(newBT)
 print('') 
 print(ifNodeExists(newBT,6))
+print(treeHeight(newBT))
