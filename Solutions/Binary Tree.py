@@ -1,3 +1,5 @@
+from Queue import Queue
+
 class TreeNode:
     def __init__(self,value):
         self.value = value
@@ -49,6 +51,21 @@ def treeHeight(root):
         return -1
     return max(treeHeight(root.left), treeHeight(root.right))+1
 
+def levelOrderTraversal(root):
+    if not root:return
+    else:
+        customQueue=Queue()
+        customQueue.enqueue(root)
+        while not customQueue.isEmpty():
+            root=customQueue.dequeue()
+            print(root.value.value)
+            if root.value.left is not None:
+                customQueue.enqueue(root.value.left)
+            if root.value.right is not None:
+                customQueue.enqueue(root.value.right)
+
+
+levelOrderTraversal(newBT)
 print('preOrder:')
 preOrder(newBT) 
 print('\ninOrder:')

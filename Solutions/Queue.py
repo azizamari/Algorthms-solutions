@@ -16,13 +16,13 @@ class Queue:
         return oldHead
     def isEmpty(self):
         return self.len==0
-q=Queue()
-print(q.isEmpty())
-print(q.dequeue())
-print(q.isEmpty())
-print(q.enqueue(156))
-print(q.enqueue(12))
-print(q.enqueue(14))
-print(q.linkedList)
-print(q.dequeue())
-print(q.linkedList)
+# q=Queue()
+# print(q.isEmpty())
+# print(q.dequeue())
+# print(q.isEmpty())
+# print(q.enqueue(156))
+# print(q.enqueue(12))
+# print(q.enqueue(14))
+# print(q.linkedList)
+# print(q.dequeue())
+# print(q.linkedList)
