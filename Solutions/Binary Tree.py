@@ -22,6 +22,13 @@ def preOrder(root):
         preOrder(root.right)
     else:return
 
+def preOrderSerialize(root):
+    if root is None:
+        return 'x,'
+    leftSer=preOrderSerialize(root.left)
+    rightSer=preOrderSerialize(root.right)
+    return str(root.value)+','+leftSer+rightSer
+
 def inOrder(root):
     if root is not None:
         preOrder(root.left)
@@ -75,3 +82,5 @@ postOrder(newBT)
 print('') 
 print(ifNodeExists(newBT,6))
 print(treeHeight(newBT))
+print('Serialized')
+print(preOrderSerialize(newBT))
