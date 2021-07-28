@@ -31,15 +31,15 @@ def preOrderSerialize(root):
 
 def inOrder(root):
     if root is not None:
-        preOrder(root.left)
+        inOrder(root.left)
         print(root.value,end='')
-        preOrder(root.right)
+        inOrder(root.right)
     else:return
 
 def postOrder(root):
     if root is not None:
-        preOrder(root.left)
-        preOrder(root.right)
+        postOrder(root.left)
+        postOrder(root.right)
         print(root.value,end='')
     else:
         return    
