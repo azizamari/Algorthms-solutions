@@ -3,4 +3,4 @@ def isPal(ch):
     if ch[0]!=ch[-1]: return False
     return isPal(ch[1:len(ch)-1])
 
-print(isPal("aziza"))
+print(isPal("aziza"))   
