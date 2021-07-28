@@ -10,12 +10,12 @@ def preOrder(root):
         preOrder(root.left)
         preOrder(root.right)
     else:return
-def inverse(root):
-    if root.left is not None and root.right is not None:
-        root.left,root.right=root.right, root.left
-        inverse(root.left)
-        inverse(root.right)
-    else:return
+def invert(root):
+    if root is None:return root
+    invert(root.left)
+    invert(root.right)
+    root.left,root.right=root.right,root.left
+    return root
 
 newBT=TreeNode(0)
 newBT.left=TreeNode(1)
