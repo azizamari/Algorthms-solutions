@@ -72,6 +72,22 @@ def levelOrderTraversal(root):
                 customQueue.enqueue(root.value.right)
 
 
+def elementExistsInTree(root,e):
+    if not root:return
+    else:
+        customQueue=Queue()
+        customQueue.enqueue(root)
+        while not customQueue.isEmpty():
+            root=customQueue.dequeue()
+            if e==root.value.value:
+                return True
+            if root.value.left is not None:
+                customQueue.enqueue(root.value.left)
+            if root.value.right is not None:
+                customQueue.enqueue(root.value.right)
+    return False
+
+
 levelOrderTraversal(newBT)
 print('preOrder:')
 preOrder(newBT) 
@@ -84,3 +100,4 @@ print(ifNodeExists(newBT,6))
 print(treeHeight(newBT))
 print('Serialized')
 print(preOrderSerialize(newBT))
+print(elementExistsInTree(newBT,15))
