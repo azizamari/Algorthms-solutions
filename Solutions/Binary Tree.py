@@ -117,7 +117,7 @@ def getDeepestNodeInTree(root):
                 customQueue.enqueue(root.value.left)
             if root.value.right is not None:
                 customQueue.enqueue(root.value.right)
-        return root.value.value
+        return root.value
 
 
 
@@ -138,4 +138,4 @@ insertInTree(newBT,TreeNode(6000))
 print('preOrder:')
 preOrder(newBT) 
 print()
-print(getDeepestNodeInTree(newBT))
+print(getDeepestNodeInTree(newBT).value)
