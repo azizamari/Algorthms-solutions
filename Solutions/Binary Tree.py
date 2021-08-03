@@ -87,6 +87,24 @@ def elementExistsInTree(root,e):
                 customQueue.enqueue(root.value.right)
     return False
 
+def insertInTree(root,e):
+    if not root:return
+    else:
+        customQueue=Queue()
+        customQueue.enqueue(root)
+        while not customQueue.isEmpty():
+            root=customQueue.dequeue()
+            if root.value.left is None:
+                root.value.left=e
+                return
+            else:
+                customQueue.enqueue(root.value.left)
+            if root.value.left is None:
+                root.value.left=e
+                return
+            else:
+                customQueue.enqueue(root.value.right)
+
 
 levelOrderTraversal(newBT)
 print('preOrder:')
@@ -101,3 +119,6 @@ print(treeHeight(newBT))
 print('Serialized')
 print(preOrderSerialize(newBT))
 print(elementExistsInTree(newBT,15))
+insertInTree(newBT,TreeNode(6000))
+print('preOrder:')
+preOrder(newBT) 
