@@ -119,6 +119,10 @@ def getDeepestNodeInTree(root):
                 customQueue.enqueue(root.value.right)
         return root.value
 
+def deleteEntireTree(root):
+    root.value=None
+    root.left=None
+    root.right=None
 
 
 levelOrderTraversal(newBT)
@@ -139,3 +143,4 @@ print('preOrder:')
 preOrder(newBT) 
 print()
 print(getDeepestNodeInTree(newBT).value)
+deleteEntireTree(newBT)
