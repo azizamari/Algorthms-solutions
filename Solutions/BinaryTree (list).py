@@ -23,6 +23,12 @@ class BinaryTree:
         self.inOrder(index*2)
         print(self.customList[index],end='')
         self.inOrder(index*2+1)
+    def postOrder(self,index=1):
+        if index>self.lastUseIndex:
+            return
+        self.inOrder(index*2)
+        self.inOrder(index*2+1)
+        print(self.customList[index],end='')
 
 newBT=BinaryTree(8)
 newBT.insertNode("aziz")
@@ -32,3 +38,5 @@ print(newBT.searchNode("left"))
 newBT.preOrder()
 print()
 newBT.inOrder()
+print()
+newBT.postOrder()
