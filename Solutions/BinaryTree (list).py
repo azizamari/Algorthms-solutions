@@ -11,9 +11,16 @@ class BinaryTree:
         return True
     def searchNode(self, value):
         return value in self.customList
+    def preOrder(self,index=1):
+        if index>self.lastUseIndex:
+            return
+        print(self.customList[index])
+        self.preOrder(index*2)
+        self.preOrder(index*2+1)
 
 newBT=BinaryTree(8)
 newBT.insertNode("aziz")
 newBT.insertNode("left")
 newBT.insertNode("right")
 print(newBT.searchNode("left"))
+newBT.preOrder()
