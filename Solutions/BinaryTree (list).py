@@ -9,7 +9,11 @@ class BinaryTree:
         self.lastUseIndex+=1
         self.customList[self.lastUseIndex]=value
         return True
+    def searchNode(self, value):
+        return value in self.customList
+
 newBT=BinaryTree(8)
 newBT.insertNode("aziz")
 newBT.insertNode("left")
 newBT.insertNode("right")
+print(newBT.searchNode("left"))
