@@ -23,8 +23,14 @@ def inOrder(root):
         print(root.data,' ',end='')
         inOrder(root.right)
     else:return
-
-
+def searchTree(root, ele):
+    if root is None: return False
+    if ele == root.data:
+        return True
+    elif ele>root.data:
+        return searchTree(root.right,ele)
+    else:
+        return searchTree(root.left,ele)
 
 newBST=BST(None)
 insertNode(newBST,15)
@@ -40,3 +46,5 @@ print(newBST.left.data)
 print(newBST.right.data)
 print(newBST.left.left.data)
 inOrder(newBST)
+print()
+print(searchTree(newBST,112))
