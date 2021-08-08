@@ -32,6 +32,34 @@ def searchTree(root, ele):
     else:
         return searchTree(root.left,ele)
 
+def minValue(root):
+    curr=root
+    while curr.left is not None:
+        curr=curr.left
+    return curr
+
+def deleteNode(root,ele):
+    if root is None:
+        return root
+    if root.data>ele:
+        root.left=deleteNode(root.left,ele)
+    elif root.data<ele:
+        root.right=deleteNode(root.right,ele)
+    else:
+        if root.left is None:
+            temp=root.right
+            root=None
+            return temp
+        if root.right is None:
+            temp=root.left
+            root=None
+            return temp
+        temp=minValue(root.right)
+        root.data=temp.data
+        root.right=deleteNode(root.right,temp.data)
+    return root
+        
+
 newBST=BST(None)
 insertNode(newBST,15)
 insertNode(newBST,30)
@@ -45,6 +73,7 @@ print(newBST.data)
 print(newBST.left.data)
 print(newBST.right.data)
 print(newBST.left.left.data)
+deleteNode(newBST,15)
 inOrder(newBST)
 print()
 print(searchTree(newBST,112))
